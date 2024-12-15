@@ -145,7 +145,6 @@ int moveForDirection(int *board, int size, char direction, int *score, int *high
                 		*highscore = (*score > *highscore) ? *score : *highscore;  
                 		*(board + neighborIndex) = 0;
                 		boardChanged = 1;
-            		    	break; 
             		}
         	}
 
@@ -265,7 +264,7 @@ void menu(int* board, int size, int* maxScore)
                 		break;
 		}
 
-        	if (moveResult == 0 && gameStart)
+        	if (moveResult == 0 && gameStart && running != 0)
         	{
             		printf("‫‪‫‪Nothing to move in this direction, choose another option.\n");
 		}
